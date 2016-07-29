@@ -8,10 +8,8 @@ FOUND_IMAGES = $(shell docker ps -a | grep ' $(IMAGE_FULL_NAME) ' | cut -d' ' -f
 
 help:
 		@echo "Available commands $(COMMANDS)"
-
 build:
 		docker build -t $(IMAGE_FULL_NAME):latest .
-
 clean:
 		@echo "Cleaning $(IMAGE_FULL_NAME) $(FOUND_IMAGES)"
 		docker rm -f $(FOUND_IMAGES) 2>/dev/null || true

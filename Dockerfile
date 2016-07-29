@@ -113,3 +113,5 @@ RUN echo n | android create avd --force -n test -t android-24 --abi armeabi-v7a
 
 # Add build scripts
 COPY ./bin/* /usr/bin/
+
+CMD /usr/bin/run_tests
