@@ -14,6 +14,6 @@ clean:
 		@echo "Cleaning $(IMAGE_FULL_NAME) $(FOUND_IMAGES)"
 		docker rm -f $(FOUND_IMAGES) 2>/dev/null || true
 test:
-		run-parts -v --report -a $(IMAGE_FULL_NAME) ./test
+		run-parts -v −−exit−on−error --report -a $(IMAGE_FULL_NAME) ./test
 publish:
 		scripts/publish.sh $(IMAGE_FULL_NAME)
