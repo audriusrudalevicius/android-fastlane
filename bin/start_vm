@@ -5,7 +5,7 @@ export TEST_APK_PATH=$(cat Screengrabfile | grep tests_apk_path | cut -d ' ' -f 
 export PACKAGE_NAME=$(cat Screengrabfile | grep app_package_name | cut -d ' ' -f 2 | sed -e "s/'//g")
 
 echo "Create AVD"
-echo "no" | android create avd --name test --target android-24 --sdcard 8000M --abi default/armeabi-v7a --force
+echo "no" | android create avd --name test --target android-24 --sdcard 1000M --abi default/armeabi-v7a --force
 
 echo "Start emulator"
 emulator64-arm -avd test -no-boot-anim -noaudio -no-window -gpu off &
