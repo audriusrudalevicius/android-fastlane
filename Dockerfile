@@ -112,4 +112,4 @@ RUN echo y | android update sdk -a --no-ui --filter sys-img-armeabi-v7a-android-
 RUN echo n | android create avd --force -n test -t android-24 --abi armeabi-v7a 
 
 # Add build scripts
-COPY ./scripts/* /usr/bin/
+COPY ./bin/* /usr/bin/

@@ -18,7 +18,4 @@ clean:
 test:
 		run-parts -v --report -a $(IMAGE_FULL_NAME) ./test
 publish:
-		if [ "$DOCKER_EMAIL" != "" ]; then
-			docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-		fi
-		docker push $(IMAGE_FULL_NAME);
+		scripts/publish.sh $(IMAGE_FULL_NAME)
