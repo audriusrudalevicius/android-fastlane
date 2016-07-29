@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+#!/usr/bin/env bash
+
+trap "exit 255" ERR SIGTERM
+
+echo "Testing start vm and stop"
+
+docker run -it $1 sh -c "start_vm && adb shell input keyevent 82 && adb -s emulator-5554 emu kill"
+
+exit 0
