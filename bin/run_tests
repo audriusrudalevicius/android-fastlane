@@ -1,5 +1,6 @@
 #!/bin/bash
 
+/usr/bin/setup_env
 /usr/bin/start_vm
 
 # unlock the emulator screen
