@@ -6,6 +6,11 @@ trap "exit 255" ERR SIGTERM
 
 echo "Testing start vm and stop"
 
-docker run -it --rm $1 sh -c "/usr/bin/start_vm && adb shell input keyevent 82 && adb -s emulator-5554 emu kill"
+mkdir -p /tmp/test_vm
+mkdir /tmp/test_vm/avd
+
+git clone https://github.com/d3trax/android-ci-sample-app /tmp/test_vm/test_app
+
+docker run -it -v /tmp/test_vm/avd:/root/avd -v /tmp/test_vm/test_app:/project --rm $1 sh -c "/usr/bin/start_vm && adb shell input keyevent 82 && adb -s emulator-5554 emu kill"
 
 exit 0

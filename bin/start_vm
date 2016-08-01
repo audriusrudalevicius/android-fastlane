@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Create AVD"
-echo "no" | android create avd --name test --target android-24 --sdcard 1000M --abi default/armeabi-v7a --force
+echo "no" | android create avd --name test --target android-24 --sdcard 1000M --abi default/armeabi-v7a --force -p /root/avd
 
 echo "Start emulator"
 emulator64-arm -avd test -no-boot-anim -noaudio -no-window -gpu off &
