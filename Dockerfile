@@ -103,6 +103,7 @@ RUN mkdir -p "$GEM_HOME" "$BUNDLE_BIN" \
 	&& chmod 777 "$GEM_HOME" "$BUNDLE_BIN"
 
 # Install fastlane
+RUN apt-get install -y less
 RUN gem install fastlane --verbose
 
 # Setup VM
