@@ -109,8 +109,7 @@ RUN gem install fastlane --verbose
 # Setup VM
 RUN rm -fr /usr/local/android-sdk-linux/system-images/android-24
 RUN echo y | android update sdk -a --no-ui --filter sys-img-armeabi-v7a-android-23
-RUN echo y | android update sdk -a --no-ui --filter sys-img-armeabi-v7a-android-24
-RUN echo n | android create avd --force -n test -t android-24 --abi armeabi-v7a 
+RUN echo n | android create avd --force -n test -t android-23 --abi armeabi-v7a
 
 # Add build scripts
 COPY ./bin/* /usr/bin/
