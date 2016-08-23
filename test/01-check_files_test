@@ -10,10 +10,6 @@ echo "Testing SDK"
 
 docker run -it --rm $1 sh -c "test -x /usr/local/android-sdk-linux/tools/android"
 
- echo "Testing android 21 platform"
-
-docker run -it --rm $1 sh -c "test -d /usr/local/android-sdk-linux/platforms/android-21"
-
 echo "Testing android 22 platform"
 
 docker run -it --rm $1 sh -c "test -d /usr/local/android-sdk-linux/platforms/android-22"
