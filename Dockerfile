@@ -104,8 +104,3 @@ RUN mkdir -p "$GEM_HOME" "$BUNDLE_BIN" \
 
 # Install fastlane
 RUN gem install fastlane --verbose
-
-# Add build scripts
-COPY ./bin/* /usr/bin/
-
-CMD /usr/bin/run_tests

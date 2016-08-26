@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if [ -f Screengrabfile ]; then
-    export APP_APK_PATH=$(cat Screengrabfile | grep app_apk_path | cut -d ' ' -f 2 | sed -e "s/'//g")
-    export TEST_APK_PATH=$(cat Screengrabfile | grep tests_apk_path | cut -d ' ' -f 2 | sed -e "s/'//g")
-    export PACKAGE_NAME=$(cat Screengrabfile | grep app_package_name | cut -d ' ' -f 2 | sed -e "s/'//g")
-else
-    echo "No Screengrabfile found!"
-fi
