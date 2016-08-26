@@ -2,7 +2,7 @@
 
 trap "exit 255" ERR SIGTERM
 
-echo "Testing start vm and stop"
+echo "Testing fastlane"
 
 docker run --rm $1 sh -c "whereis fastlane"
 
